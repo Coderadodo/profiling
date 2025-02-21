@@ -22,7 +22,7 @@ public void welcomePage() {
 }
 // internationalization it has 20 characters = i18n
     @Bean
-    public ReloadableResourceBundleMessageSource getMessageSource() {
+    public ReloadableResourceBundleMessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
         messageSource.setBasename("classpath:i18n/messages");
         messageSource.setDefaultEncoding("UTF-8");

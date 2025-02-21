@@ -13,10 +13,28 @@ public class MessageService {
         this.messageSource = messageSource;
         String textEn = messageSource.getMessage(
                 "hello" ,
-                new Object[]{},
+                new Object[]{"Victor", "Adodo"},
                 Locale.ENGLISH
               );
         System.out.println(textEn);
+
+
+        String textPL = messageSource.getMessage(
+                "hello" ,
+                new Object[]{"Fever", "", "", "", "", "", ""},
+                Locale.forLanguageTag("pl")
+        );
+
+        System.out.println(textPL);
+Object[] objects = {textEn, textPL};
+        String textEE = messageSource.getMessage(
+                "hello" ,
+                new Object[]{"Ramona Adodo", "ja", "Johnson Johnson"},
+                Locale.forLanguageTag("ee")
+        );
+        System.out.println(textEE);
+
+
     }
 }
 
